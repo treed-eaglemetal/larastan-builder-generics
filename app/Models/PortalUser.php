@@ -6,8 +6,8 @@ use App\Builders\UserPortalRequestBuilder;
 
 class PortalUser extends User
 {
-    public function newEloquentBuilder($query): UserPortalRequestBuilder
+    public function newEloquentBuilder($query): PortalUserBuilder
     {
-	return new UserPortalRequestBuilder($query);
+	    return new PortalUserBuilder($query);
     }
 }
