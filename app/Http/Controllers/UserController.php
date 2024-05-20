@@ -8,9 +8,9 @@ use Illuminate\Contracts\View\View;
 
 class UserController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
-        $users = PortalUser::query()->get();
+        $users = PortalUser::query()->type($request->type)->get();
 
         return view('users.index', compact('users'));
     }
