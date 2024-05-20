@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index(Request $request): View
     {
-        $users = PortalUser::query()->type($request->type)->get();
+        $users = PortalUser::query()->whereType($request->type)->get();
 
         return view('users.index', compact('users'));
     }
