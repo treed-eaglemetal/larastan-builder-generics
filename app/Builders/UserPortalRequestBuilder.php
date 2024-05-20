@@ -4,14 +4,14 @@ namespace App\Builders;
 
 use App\Enums\Type;
 
-class UserPortalRequestBuilder extends UserRequestBuilder
+class PortalUserBuilder extends UserBuilder
 {
     public function whereType(Type|string $type): static
     {
         if (is_string($type)) {
-	    $type = Type::from(strtolower($type));
-	}
+    	    $type = Type::from(strtolower($type));
+    	}
 
-	return parent::whereType($type);
+	    return parent::whereType($type);
     }
 }
