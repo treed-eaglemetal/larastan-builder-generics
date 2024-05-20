@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Builders\UserPortalRequestBuilder;
+use App\Builders\PortalUserBuilder;
 
 class PortalUser extends User
 {
